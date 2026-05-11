@@ -1,6 +1,6 @@
 embedding_model:
-  provider: "google"
-  model_name: "models/text-embedding-004"
+  provider: "local"
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
 
 retriever:
   top_k: 10
@@ -10,14 +10,8 @@ retriever:
   lambda_mult: 0.5  # Diversity vs relevance (0=max diversity, 1=max relevance)
 
 llm:
-  groq:
-    provider: "groq"
-    model_name: "openai/gpt-oss-20b"
-    temperature: 0
-    max_output_tokens: 2048
-
-  google:
-    provider: "google"
-    model_name: "gemini-2.0-flash"
+  local:
+    provider: "local"
+    model_name: "phi3:mini"
     temperature: 0
     max_output_tokens: 2048

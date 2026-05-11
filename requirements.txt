@@ -5,6 +5,8 @@ langchain-core==0.3.72
 langchain-groq==0.3.6
 langchain-google-genai==2.1.8
 langchain-openai==0.2.10
+google-genai
+langchain-huggingface
 
 docx2txt==0.8
 ipykernel==6.30.0
@@ -13,3 +15,9 @@ python-multipart==0.0.20
 
 langsmith
 openai
+langchain-google-genai
+fastapi
+uvicorn
+structlog
+sentence-transformers
+pandas

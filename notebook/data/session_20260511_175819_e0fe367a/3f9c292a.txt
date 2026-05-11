@@ -1,0 +1,169 @@
+
+2025 AI Engineering Report - Structured Summary
+==============================================
+
+Source:
+Amplify Partners – The 2025 AI Engineering Report
+
+Overview
+--------
+The report analyzes trends in AI engineering, LLM adoption, RAG systems,
+model deployment, infrastructure, evaluation, and enterprise AI workflows.
+It is based on responses from AI engineers, founders, and organizations
+building production AI systems.
+
+Key Findings
+------------
+
+1. OpenAI Dominance
+- OpenAI models dominate customer-facing AI applications.
+- 3 of the top 5 most-used models are from OpenAI.
+- Half of the top 10 most popular models are OpenAI models.
+
+2. RAG Adoption
+- Around 70% of respondents use Retrieval-Augmented Generation (RAG)
+  in some form.
+- RAG has become a core architecture for enterprise AI applications.
+- Companies use RAG to reduce hallucinations and improve factual grounding.
+
+3. Model Update Frequency
+- More than 50% of teams update their models at least monthly.
+- Around 17% update models weekly.
+- Continuous iteration is becoming normal in production AI systems.
+
+4. Evaluation Importance
+- Evaluation is now considered a critical component of LLMOps.
+- Teams evaluate:
+  * correctness
+  * hallucination rates
+  * retrieval quality
+  * latency
+  * user satisfaction
+- Golden datasets and automated evaluation pipelines are increasingly common.
+
+5. Agentic AI Growth
+- AI agents and multi-step workflows are rapidly growing.
+- Engineers are using frameworks such as:
+  * LangGraph
+  * CrewAI
+  * AutoGen
+  * Semantic Kernel
+- Agentic workflows combine reasoning, tool usage, and memory.
+
+6. Rise of Open-Source Models
+- Open-source models are improving rapidly.
+- Popular models include:
+  * Llama
+  * Mistral
+  * Qwen
+  * DeepSeek
+- Organizations use open-source models for:
+  * privacy
+  * cost optimization
+  * on-premise deployment
+
+7. Vector Databases
+- Vector databases remain foundational for RAG systems.
+- Commonly used vector stores:
+  * Pinecone
+  * Weaviate
+  * Chroma
+  * Milvus
+  * FAISS
+
+8. Infrastructure Trends
+- GPU infrastructure demand continues to increase.
+- Companies optimize for:
+  * inference cost
+  * latency
+  * throughput
+  * scalability
+- Quantization and efficient serving frameworks are becoming popular.
+
+9. LLMOps Stack
+- Common tools in production:
+  * LangChain
+  * LangSmith
+  * LlamaIndex
+  * Weights & Biases
+  * vLLM
+  * Ollama
+
+10. Enterprise Concerns
+- Main concerns include:
+  * hallucinations
+  * security
+  * data privacy
+  * prompt injection
+  * compliance
+- Evaluation and monitoring are essential for production systems.
+
+Important Concepts Mentioned
+----------------------------
+- RAG (Retrieval-Augmented Generation)
+- AI Agents
+- LLMOps
+- Prompt Engineering
+- Fine-Tuning
+- Vector Search
+- Evaluation Pipelines
+- Guardrails
+- Tool Calling
+- Multi-Agent Systems
+
+Common Evaluation Metrics
+-------------------------
+- Faithfulness
+- Relevance
+- Answer Correctness
+- Context Precision
+- Latency
+- Hallucination Rate
+
+Popular Evaluation Tools
+------------------------
+- LangSmith
+- RAGAS
+- DeepEval
+- Phoenix by Arize
+- Weights & Biases
+
+Typical LLMOps Workflow
+-----------------------
+User Query
+   ->
+Retriever
+   ->
+Vector Database
+   ->
+LLM
+   ->
+Generated Answer
+   ->
+Evaluation
+   ->
+Monitoring & Feedback
+
+Major Industry Direction
+------------------------
+The industry is moving from:
+- simple chatbots
+toward:
+- production AI systems
+- autonomous agents
+- enterprise copilots
+- tool-using AI systems
+- multimodal AI applications
+
+Conclusion
+----------
+The 2025 AI Engineering landscape focuses heavily on:
+- reliable AI systems
+- evaluation and observability
+- agentic workflows
+- RAG architectures
+- scalable inference
+- continuous deployment and monitoring
+
+AI engineering is evolving from experimentation to mature software
+engineering practices for production-grade AI systems.
