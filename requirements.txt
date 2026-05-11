@@ -21,3 +21,4 @@ uvicorn
 structlog
 sentence-transformers
 pandas
+Jinja2
