@@ -33,7 +33,7 @@ app.add_middleware(
 # Static and templates
 BASE_DIR = Path(__file__).resolve().parent
 static_dir = BASE_DIR / "static"
-templates_dir = BASE_DIR / "templates"
+templates_dir = BASE_DIR / "template"
 app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")
 templates = Jinja2Templates(directory=str(templates_dir))
 
@@ -86,7 +86,7 @@ def health() -> Dict[str, str]:
 
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request) -> HTMLResponse:
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse(request, "index.html")
 
 
 @app.post("/upload", response_model=UploadResponse)
