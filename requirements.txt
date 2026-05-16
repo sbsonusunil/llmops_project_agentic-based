@@ -22,3 +22,5 @@ structlog
 sentence-transformers
 pandas
 Jinja2
+faiss-cpu
+pytest

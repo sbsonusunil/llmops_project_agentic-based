@@ -3,7 +3,11 @@ from pathlib import Path
 from typing import Iterable, List, Optional, Dict, Any
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.vectorstores import FAISS
+try:
+    from langchain_community.vectorstores import FAISS
+except Exception as e:
+    FAISS = None
+    _FAISS_IMPORT_ERROR = e
 from multi_doc_chat.utils.model_loader import ModelLoader
 from multi_doc_chat.logger import GLOBAL_LOGGER as log
 from multi_doc_chat.exception.custom_exception import DocumentPortalException
@@ -118,6 +122,11 @@ SUPPORTED_EXTENSIONS = {".pdf", ".docx", ".txt"}
 # FAISS Manager (load-or-create)
 class FaissManager:
     def __init__(self, index_dir: Path, model_loader: Optional[ModelLoader] = None):
+        if FAISS is None:
+            raise DocumentPortalException(
+                "FAISS is not available. Install faiss-cpu or faiss-gpu to use FaissManager.",
+                _FAISS_IMPORT_ERROR,
+            )
         self.index_dir = Path(index_dir)
         self.index_dir.mkdir(parents=True, exist_ok=True)
 

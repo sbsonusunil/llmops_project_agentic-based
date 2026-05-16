@@ -35,6 +35,7 @@ def test_split_chunks_respect_size_and_overlap(tmp_dirs, stub_model_loader):
 
 
 def test_faiss_manager_add_documents_idempotent(tmp_dirs, stub_model_loader):
+    pytest.importorskip("faiss")
     fm = FaissManager(index_dir=pathlib.Path("faiss_index/test"))
     fm.load_or_create(texts=["hello", "world"], metadatas=[{"source": "a"}, {"source": "b"}])
     docs = [Document(page_content="hello", metadata={"source": "a"})]
